@@ -1,0 +1,21 @@
+{
+    "name": "rplansky/mongolid-symfony",
+    "type": "library",
+    "description": "Easy, powerful and ultrafast MongoDB ODM Bundle for Symfony.",
+    "keywords": ["database", "nosql", "odm", "mongodb"],
+    "homepage": "https://www.github.com/rplansky/mongolid-symfony",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ricardo Plansky",
+            "email": "ricardo.plansky@yahoo.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "zizaco/mongolid": "0.5.*"
+    },
+    "autoload": {
+        "psr-0": { "MongoLid\\MongoLid\\": "src/" }
+    }
+}
