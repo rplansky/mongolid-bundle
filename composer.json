@@ -16,6 +16,6 @@
         "zizaco/mongolid": "0.5.*"
     },
     "autoload": {
-        "psr-0": { "MongoLid\\MongoLid\\": "src/" }
+        "psr-0": { "Rplansky\\MongoLid\\": "src/" }
     }
 }
