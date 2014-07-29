@@ -1,6 +1,6 @@
 <?php
 
-namespace Plansky\Mongolid\MongolidBundle;
+namespace Plansky\MongolidBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

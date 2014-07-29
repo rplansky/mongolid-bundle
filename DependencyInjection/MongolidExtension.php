@@ -1,6 +1,6 @@
 <?php
 
-namespace Plansky\Mongolid\MongolidBundle\DependencyInjection;
+namespace Plansky\MongolidBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
