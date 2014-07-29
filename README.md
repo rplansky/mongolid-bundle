@@ -36,7 +36,7 @@ class Product extends BaseDocument
      * Database's name
      * @var string
      */
-     protected database = 'mongolid';
+     protected $database = 'mongolid';
 }
 ```
 
