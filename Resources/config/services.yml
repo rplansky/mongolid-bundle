@@ -1,5 +1,5 @@
 parameters:
-#    mongo_lid.example.class: Rplansky\MongoLid\MongoLidBundle\Example
+#    mongo_lid.example.class: Plansky\MongoLid\MongoLidBundle\Example
 
 services:
 #    mongo_lid.example:

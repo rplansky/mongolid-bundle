@@ -1,6 +1,6 @@
 <?php
 
-namespace Rplansky\MongoLid\MongoLidBundle\DependencyInjection;
+namespace Plansky\Mongolid\MongolidBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
