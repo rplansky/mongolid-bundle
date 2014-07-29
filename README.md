@@ -18,8 +18,8 @@ Creating a collection in three little steps:
 * Set a instance variable called ```$database``` with your mongo database name.
     
 ######Example:
-```php+html
-<?php 
+
+```php
 namespace Acme\DemoBundle\Document;
 
 use Plansky\MongolidBundle\Document\BaseDocument;
