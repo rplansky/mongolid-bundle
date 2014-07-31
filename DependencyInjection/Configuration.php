@@ -18,11 +18,34 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('mongo_lid');
+        $rootNode = $treeBuilder->root('mongolid');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+            ->addDefaultsIfNotSet()
+            ->children()
+                ->arrayNode('connections')
+                    ->prototype('array')
+                        ->children()
+                            ->scalarNode('hostname')
+                                ->defaultValue('localhost')
+                            ->end()
+                            ->integerNode('port')
+                                ->defaultValue(27017)
+                                ->min(0)
+                            ->end()
+                            ->scalarNode('database')
+                                ->defaultValue('mongolid')
+                            ->end()
+                            ->scalarNode('username')
+                                ->defaultNull()
+                            ->end()
+                            ->scalarNode('password')
+                                ->defaultNull()
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+            ->end();
 
         return $treeBuilder;
     }
