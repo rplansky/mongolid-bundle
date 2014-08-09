@@ -22,6 +22,15 @@ class MongolidExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
+        foreach (array_keys($config['connections']) as $key) {
+            foreach ($config['connections'][$key] as $parameter => $value) {
+                $container->setParameter(
+                    'mongolid.connection.'.$parameter,
+                    $value
+                );
+            }
+        }
+
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
     }
