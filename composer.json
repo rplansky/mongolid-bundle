@@ -1,9 +1,9 @@
 {
-    "name": "rplansky/mongolid-symfony",
+    "name": "plansky/mongolid-bundle",
     "type": "library",
     "description": "Easy, powerful and ultrafast MongoDB ODM Bundle for Symfony.",
     "keywords": ["database", "nosql", "odm", "mongodb"],
-    "homepage": "https://www.github.com/rplansky/mongolid-symfony",
+    "homepage": "https://www.github.com/rplansky/mongolid-bundle",
     "license": "MIT",
     "authors": [
         {
