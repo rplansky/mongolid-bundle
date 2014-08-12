@@ -29,7 +29,7 @@ $bundles = array(
 ```
 
 ### Configure MongoDB Connection
-Edit `app/config.yml` file adding the MongoDB connection
+Edit `app/config/config.yml` file adding the MongoDB connection
 
 ```yaml
 mongolid:
