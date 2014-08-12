@@ -47,13 +47,13 @@ mongolid:
 To start using MongoLid just extends `Plansky\MongolidBundle\Document\BaseDocument`
 
 ```php
-class MyDocument extends Plansky\MongolidBundle\Document\BaseDocument
+class MyDocument extends \Plansky\MongolidBundle\Document\BaseDocument
 {
     /**
      * Collection's that will be used to persist my document
      * @var string
      */
-    $collection = 'my_collection';
+    protected $collection = 'my_collection';
 }
 ```
 
