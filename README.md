@@ -4,53 +4,60 @@
 
 MongoLid is an easy, powerful and ultrafast MongoDB ODM. You can see more information in the [MongoLid Laravel Package](https://github.com/leroy-merlin-br/mongolid-laravel)
 
-## Connecting with MongoDB
+## Getting Started
 
-By default, MongolidBundle will try to connect using the default MongoDB connection parameters. It will try to connect to 'localhost' using the '27017' port.
+### Installation
+Add `"plansky/mongolid-bundle": "dev-master"` to "require" key in `composer.json`
 
-Issues [#1](https://github.com/rplansky/mongolid-symfony/issues/1) and [#2](https://github.com/rplansky/mongolid-symfony/issues/2) were created to make this connection dynamic.
-
-## Basic Usage
-
-Creating a collection in three little steps:
-* Extends ```Plansky\MongoligBundle\Document\BaseDocument``` class;
-* Set a instance variable called ```$collection``` with your collection's name.
-* Set a instance variable called ```$database``` with your mongo database name.
-    
-######Example:
-
-```php
-namespace Acme\DemoBundle\Document;
-
-use Plansky\MongolidBundle\Document\BaseDocument;
-
-class Product extends BaseDocument
-{
-    /**
-     * Collection's name
-     * @var string
-     */
-     protected $collection = 'products';
-    
-    /**
-     * Database's name
-     * @var string
-     */
-     protected $database = 'mongolid';
+```yml
+"require": {
+    ...
+    "plansky/mongolid-bundle": "dev-master"
 }
 ```
 
-### Magics setters and getters
-You don't need to define your collection's attributes and mark them with an annotation, a configuration file, schemas or something like that, just set your attributes directly and save it. 
+Run `composer update plansky/mongolid-bundle`
+
+### Bundle Registration
+Register **MongolidBundle** in `AppKernel` class
 
 ```php
-...
-    $product->_id = 'mongolid';
-    $product->name = 'MongolibBundle';
-    $product->description = 'MongoLid is an easy, powerful and ultrafast MongoDB ODM.';
-    $product->save();
-...
+$bundles = array(
+    ...
+    new Plansky\MongolidBundle\MongolidBundle(),
+);
 ```
+
+### Configure MongoDB Connection
+Edit `app/config.yml` file adding the MongoDB connection
+
+```yml
+mongolid:
+    connections:
+        default:
+            hostname: 'localhost'
+            port: 27017
+            username: null
+            password: null
+            database: 'mongolid'
+```
+
+### Extends BaseDocument
+
+To start using MongoLid just extends `Plansky\MongolidBundle\Document\BaseDocument`
+
+```php
+class MyDocument extends Plansky\MongolidBundle\Document\BaseDocument
+{
+    /**
+     * Collection's that will be used do store my document
+     * @var string
+     */
+    $connection = 'my_collection';
+}
+```
+
+**Enjoy =)**
 
 ## License
 MIT
