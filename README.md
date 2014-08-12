@@ -9,7 +9,7 @@ MongoLid is an easy, powerful and ultrafast MongoDB ODM. You can see more inform
 ### Installation
 Add `"plansky/mongolid-bundle": "dev-master"` to "require" key in `composer.json`
 
-```yml
+```yaml
 "require": {
     ...
     "plansky/mongolid-bundle": "dev-master"
@@ -31,7 +31,7 @@ $bundles = array(
 ### Configure MongoDB Connection
 Edit `app/config.yml` file adding the MongoDB connection
 
-```yml
+```yaml
 mongolid:
     connections:
         default:
@@ -50,10 +50,10 @@ To start using MongoLid just extends `Plansky\MongolidBundle\Document\BaseDocume
 class MyDocument extends Plansky\MongolidBundle\Document\BaseDocument
 {
     /**
-     * Collection's that will be used do store my document
+     * Collection's that will be used to persist my document
      * @var string
      */
-    $connection = 'my_collection';
+    $collection = 'my_collection';
 }
 ```
 
