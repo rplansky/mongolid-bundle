@@ -15,5 +15,7 @@
         "php": ">=5.3",
         "zizaco/mongolid": "0.5.*"
     },
-    "autoload": {"psr-0": { "Plansky\\MongolidBundle": "" }}
+    "autoload": {
+        "psr-0": { "Plansky\\MongolidBundle": "src/" }
+    }
 }
